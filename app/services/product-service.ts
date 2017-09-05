@@ -1,3 +1,6 @@
+import {Http} from '@angular/http';
+import {Injectable} from '@angular/core';
+
 export class Product {
     constructor(
         public id: number,
@@ -6,8 +9,15 @@ export class Product {
         public description: string) {}
 }
 
+@Injectable()
 export class ProductService {
+    products: Product[];
+    
+    constructor(private http:Http){
+        let productResponse = http.get('products.json');
+    }
+
     getProduct(): Product {
-        return new Product(0, 'iPhone', 249.99, 'The latest iPhone, 7-inch screen');
+        return this.products[0];
     }
 }

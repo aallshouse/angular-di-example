@@ -3,6 +3,7 @@ import ProductComponent from './components/product/product';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+import {HttpModule} from '@angular/http';
 
 @Component({
     selector: 'app',
@@ -14,7 +15,10 @@ import {BrowserModule} from '@angular/platform-browser';
 class AppComponent {}
 
 @NgModule({
-    imports: [BrowserModule],
+    imports: [
+        BrowserModule,
+        HttpModule
+    ],
     declarations: [AppComponent, ProductComponent],
     bootstrap: [AppComponent]
 })
