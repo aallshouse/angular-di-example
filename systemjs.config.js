@@ -9,7 +9,8 @@ System.config({
         'node_modules/@angular/*': 'node_modules/@angular/*/bundles'
     },
     meta: {
-        '@angular/*': {'format': 'cjs'}
+        '@angular/*': {'format': 'cjs'},
+        '*.json': {'loader': 'json'}
     },
     packages: {
         'app': {main: 'main', defaultExtension: 'ts'},
