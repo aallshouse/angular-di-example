@@ -15,10 +15,7 @@ import {HttpModule} from '@angular/http';
 class AppComponent {}
 
 @NgModule({
-    imports: [
-        BrowserModule,
-        HttpModule
-    ],
+    imports: [BrowserModule, HttpModule],
     declarations: [AppComponent, ProductComponent],
     bootstrap: [AppComponent]
 })

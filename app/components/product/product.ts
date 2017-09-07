@@ -18,5 +18,11 @@ export default class ProductComponent {
 
     constructor(productService: ProductService) {
         this.product = productService.getProduct();
+        // this.product = {
+        //     "id": 0,
+        //     "title": "test",
+        //     "description": "test",
+        //     "price": 1.00
+        // };
     }
 }
